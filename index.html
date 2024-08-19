@@ -11,6 +11,8 @@
 <body>
     <div class="container">
         <aside class="sidebar">
+        
+
             <div class="logo">
                 <img src="Adsız tasarım - 2024-08-18T071009.877.png" alt="Logo">
             </div>
@@ -27,6 +29,7 @@
         </aside>
 
         <main class="content">
+            <button style="border-radius: 8px; width: 130px; height: 30px; border: none; background-color: black; color: white;" class="toggle-dark-mode">Dark Mode</button>
             <b>HOME</b>
     
             <div style="margin-top: 20px;" class="post-composer">
@@ -130,5 +133,22 @@
             </div>
         </aside>
     </div>
+    <script>document.querySelector('.toggle-dark-mode').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('.sidebar').classList.toggle('dark-mode');
+        document.querySelector('.suggestions').classList.toggle('dark-mode');
+        document.querySelector('.content').classList.toggle('dark-mode');
+    
+        document.querySelectorAll('.social-post, .announcement, .tokenomics, .suggestion-card').forEach(function(element) {
+            element.classList.toggle('dark-mode');
+        });
+    
+        document.querySelectorAll('nav ul li a').forEach(function(element) {
+            element.classList.toggle('dark-mode');
+        });
+    
+        document.querySelector('.buy-token').classList.toggle('dark-mode');
+    });
+    </script>
 </body>
 </html>

@@ -23,7 +23,7 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
-    height: calc(100vh - 40px); /* Sağ ve sol sabit kenarların tam görünür olması için */
+    height: calc(100vh - 40px);
     overflow-y: auto;
 }
 
@@ -35,7 +35,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    height: calc(100vh - 40px); /* Sağ ve sol sabit kenarların tam görünür olması için */
+    height: calc(100vh - 40px); 
     overflow-y: auto;
 }
 
@@ -97,8 +97,8 @@ a {
 
 .content {
     flex-grow: 1;
-    margin-left: 260px; /* Sol kenara yer bırak */
-    margin-right: 260px; /* Sağ kenara yer bırak */
+    margin-left: 260px; 
+    margin-right: 260px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -155,7 +155,6 @@ a {
     font-weight: bold;
 }
 
-/* Sosyal Medya Gönderisi Stilleri */
 .social-post {
     margin-bottom: 20px;
     padding: 15px;
@@ -196,4 +195,28 @@ a {
     width: 100%;
     border-radius: 8px;
     margin-top: 10px;
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+.sidebar.dark-mode, .suggestions.dark-mode, .content.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+.social-post.dark-mode, .announcement.dark-mode, .tokenomics.dark-mode, .suggestion-card.dark-mode {
+    background-color: #292929;
+    border-color: #444;
+}
+
+.buy-token.dark-mode {
+    background-color: #007bff;
+}
+
+nav ul li a.dark-mode {
+    color: #f1f1f1;
 }
