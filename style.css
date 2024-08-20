@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /* background-color: #f0f0f0; */
     color: #333;
 }
 
@@ -13,6 +12,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+    flex-wrap: wrap;
 }
 
 .sidebar {
@@ -35,7 +35,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    height: calc(100vh - 40px); 
+    height: calc(100vh - 40px);
     overflow-y: auto;
 }
 
@@ -197,7 +197,6 @@ a {
     margin-top: 10px;
 }
 
-
 body.dark-mode {
     background-color: #121212;
     color: #f1f1f1;
@@ -219,4 +218,51 @@ body.dark-mode {
 
 nav ul li a.dark-mode {
     color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar, .suggestions {
+        position: static;
+        width: 100%;
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .content {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .buy-token {
+        font-size: 16px;
+        height: 35px;
+    }
+
+    .social-post .post-header .profile-picture {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-post .username {
+        font-size: 16px;
+    }
+
+    .suggestion-card img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .suggestion-info p {
+        font-size: 16px;
+    }
 }
